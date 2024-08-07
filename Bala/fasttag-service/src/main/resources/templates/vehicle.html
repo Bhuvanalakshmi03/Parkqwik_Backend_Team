@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Enter Vehicle Number</title>
+</head>
+<body>
+<form th:action="@{/user}" method="post" th:object="${userVehicleInput}">
+    <label for="vehiclenumber">Vehicle Number:</label>
+    <input type="text" id="vehiclenumber" name="vehicleNumber" th:field="*{vehiclenumber}" required> <br>
+    <label for="bank">Select Bank:</label>
+    <select id="bank" name="bank" th:field="*{bank}">
+        <option value="IDFC">IDFC</option>
+        <option value="HDFC">HDFC</option>
+        <option value="ICICI">ICICI</option>
+    </select> <br>
+    <button type="submit">Recharge</button>
+</form>
+</body>
+</html>
